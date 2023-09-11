@@ -5,11 +5,11 @@ import Button from '@mui/material/Button';
 function Signup(){
 return(
 <div>
-    <center>
+    <div style={{display:'flex',justifyContent:'center'}}>
         <div style={{paddingTop:150,marginBottom:10}}>
             <Typography variant='h4'>Course Comet 🚀</Typography>
         </div>
-    </center>
+    </div>
     <div style={{display:'flex',
     justifyContent:'center',
     alignItems:'center',
