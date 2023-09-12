@@ -1,3 +1,4 @@
+import AddCourse from "./AddCourse";
 import Appbar from "./Appbar";
 import Signin from "./Signin";
 import Signup from "./Signup";
@@ -13,6 +14,7 @@ function App() {
         <Router>
         <Appbar/>
           <Routes>
+            <Route path="/addcourse" element={<AddCourse/>}/>
             <Route path="/signup" element={<Signup/>}/>
             <Route path="/signin" element={<Signin/>}/>
           </Routes>
