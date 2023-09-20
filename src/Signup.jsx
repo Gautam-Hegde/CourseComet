@@ -48,6 +48,7 @@ backgroundColor:'#E1F5FE'}}
             function callbacfn2(data){
                 // console.log(data);
                 localStorage.setItem("token",data.token);
+                window.location='/';
             }
             function callbackfn(res){
                 res.json().then(callbacfn2);

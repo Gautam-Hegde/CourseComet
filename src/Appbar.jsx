@@ -24,9 +24,9 @@ function Appbar() {
   }, []);
 
   const handleLogout = () => {
-    // Perform logout action here, e.g., clear localStorage, etc.
-    localStorage.removeItem("token"); // Assuming you store the token in localStorage
-    setUserEmail(null); // Clear the userEmail state
+    localStorage.removeItem("token"); 
+    setUserEmail(null); 
+    window.location='/signin';
   };
 
   return (
