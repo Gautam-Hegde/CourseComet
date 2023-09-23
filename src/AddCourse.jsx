@@ -47,7 +47,8 @@ backgroundColor:'#E1F5FE'}}
             // let password=document.getElementById('password').value;
             function callbacfn2(data){
                 console.log(data);
-                localStorage.setItem("token",data.token);
+                alert("course added successfully!");
+                // localStorage.setItem("token",data.token);
             }
             function callbackfn(res){
                 res.json().then(callbacfn2);
