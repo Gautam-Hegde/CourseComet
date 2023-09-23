@@ -23,7 +23,7 @@ function Courses() {
   }, []);
 
   return (
-    <div>
+    <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
         {myCourses.map((x)=>{
             return <Course course={x}/> 
         })}
