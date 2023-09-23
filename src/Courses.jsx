@@ -1,4 +1,4 @@
-import { Card, Typography } from "@mui/material";
+import { Button, Card, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 
 function Courses() {
@@ -30,7 +30,7 @@ function Courses() {
     </div>
   );
 }
-function Course(props){
+export function Course(props){
     return(
        <Card style={{
         margin: 10,
@@ -40,6 +40,12 @@ function Course(props){
        }}>
         <Typography textAlign={"center"} variant="h5">{props.course.title}</Typography>
         <Typography textAlign={"center"} variant="subtitle1">{props.course.description}</Typography>
+        <img src={props.course.imageLink} style={{width: 300}}/>
+        <div style={{display: "flex", justifyContent: "center", marginTop: 20}}>
+            <Button variant="contained" size="large" onClick={() => {
+                // navigate("/course/" + course._id);
+            }}>Edit</Button>
+        </div>
         </Card>
     );
 }

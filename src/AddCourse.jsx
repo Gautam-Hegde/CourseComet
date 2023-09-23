@@ -6,6 +6,7 @@ import { useState } from 'react';
 function AddCourse(){
     const[title,setTitle]=useState("");
     const[description,setDescription]=useState("");
+    const [image, setImage] = useState("");
 
 return(
 <div>
@@ -36,9 +37,19 @@ backgroundColor:'#E1F5FE'}}
         <br/>
         <br/>
         <TextField multiline
-          rows={4} fullWidth='true'  id="description" label="Course Description" variant="outlined" type='password' onChange={(e)=>{
+          rows={4} fullWidth='true'  id="description" label="Course Description" variant="outlined"  onChange={(e)=>{
             setDescription(e.target.value);
         }}/>
+        
+        <TextField
+                    style={{marginBottom: 10,marginTop:10}}
+                    onChange={(e) => {
+                        setImage(e.target.value)
+                    }}
+                    fullWidth={true}
+                    label="Image link"
+                    variant="outlined"
+                />
         <br/>
         <br/>
         <Button fullWidth='true' style={{borderRadius:'10px',backgroundColor:'#eb4d4b'}} variant="contained"  size='large' 
@@ -58,7 +69,7 @@ backgroundColor:'#E1F5FE'}}
                 body:JSON.stringify({
                     title:title,
                     description:description,
-                    imageLink:"",
+                    imageLink:image,
                     published:true
                 }),
                 headers:{

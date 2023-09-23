@@ -1,5 +1,6 @@
 import AddCourse from "./AddCourse";
 import Appbar from "./Appbar";
+import Course from "./Course";
 import Courses from "./Courses";
 import Signin from "./Signin";
 import Signup from "./Signup";
@@ -16,7 +17,8 @@ function App() {
         <Appbar/>
           <Routes>
             <Route path="/addcourse" element={<AddCourse/>}/>
-            <Route path="/courses" element={<Courses/>}/>
+            <Route path="/Course/:courseId" element={<Course/>}/>
+            <Route path="/Courses" element={<Courses/>}/>
             <Route path="/signup" element={<Signup/>}/>
             <Route path="/signin" element={<Signin/>}/>
           </Routes>
